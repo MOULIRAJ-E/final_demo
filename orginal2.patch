@@ -1,0 +1,94 @@
+diff --git a/ashraf1.txt b/ashraf1.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/ashraffile1.patch b/ashraffile1.patch
+new file mode 100644
+index 0000000..e69de29
+diff --git a/factorial.c b/factorial.c
+new file mode 100644
+index 0000000..65b0abf
+--- /dev/null
++++ b/factorial.c
+@@ -0,0 +1,12 @@
++#include<stdio.h>  
++int main()    
++{    
++ int i,fact=1,number;    
++ printf("Enter a number: ");    
++  scanf("%d",&number);    
++    for(i=1;i<=number;i++){    
++      fact=fact*i;    
++  }    
++  printf("Factorial of %d is: %d",number,fact);    
++return 0;  
++}      
+diff --git a/fibanocci.c b/fibanocci.c
+new file mode 100644
+index 0000000..5ce2430
+--- /dev/null
++++ b/fibanocci.c
+@@ -0,0 +1,16 @@
++#include<stdio.h>    
++int main()    
++{    
++ int n1=0,n2=1,n3,i,number;    
++ printf("Enter the number of elements:");    
++ scanf("%d",&number);    
++ printf("\n%d %d",n1,n2);//printing 0 and 1    
++ for(i=2;i<number;++i)//loop starts from 2 because 0 and 1 are already printed    
++ {    
++  n3=n1+n2;    
++  printf(" %d",n3);    
++  n1=n2;    
++  n2=n3;    
++ }  
++  return 0;  
++ }    
+\ No newline at end of file
+diff --git a/moulifile1.patch b/moulifile1.patch
+new file mode 100644
+index 0000000..e69de29
+diff --git a/mukil.txt b/mukil.txt
+new file mode 100644
+index 0000000..65acfcc
+--- /dev/null
++++ b/mukil.txt
+@@ -0,0 +1,3 @@
++first
++second
++
+diff --git a/murali.txt b/murali.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/primeno.c b/primeno.c
+new file mode 100644
+index 0000000..21bc590
+--- /dev/null
++++ b/primeno.c
+@@ -0,0 +1,26 @@
++#include <stdio.h>
++int main() {
++  int n, i, flag = 0;
++  printf("Enter a positive integer: ");
++  scanf("%d", &n);
++
++  for (i = 2; i <= n / 2; ++i) {
++    // condition for non-prime
++    if (n % i == 0) {
++      flag = 1;
++      break;
++    }
++  }
++
++  if (n == 1) {
++    printf("1 is neither prime nor composite.");
++  } 
++  else {
++    if (flag == 0)
++      printf("%d is a prime number.", n);
++    else
++      printf("%d is not a prime number.", n);
++  }
++
++  return 0;
++}
